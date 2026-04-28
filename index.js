@@ -317,10 +317,4 @@ Muestra tu avatar.
   }
 });
 
-if (command === "tula") {
-  const numero = Math.floor(Math.random() * 30) + 5; // entre 5 y 34 cm
-
-  return message.reply(`😏 La tula te mide **${numero} cm**`);
-}
-
 client.login(process.env.TOKEN);
