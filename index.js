@@ -169,6 +169,12 @@ client.on("messageCreate", async (message) => {
     return message.reply(message.author.displayAvatarURL());
   }
 
+  // TULA
+  if (command === "tula") {
+  const numero = Math.floor(Math.random() * 30) + 5;
+  return message.reply(`😏 La tula te mide **${numero} cm**`);
+}
+
   // AGREGAR APUESTA
   if (command === "addapuesta") {
     const contenido = args.join(" ");
