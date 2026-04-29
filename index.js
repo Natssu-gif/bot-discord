@@ -228,9 +228,6 @@ client.on("messageCreate", async (message) => {
 
   // BORRAR UNA APUESTA
   if (command === "borrarapuesta") {
-    if (!message.member.permissions.has(PermissionFlagsBits.Administrator)) {
-      return message.reply("🔒 Solo un administrador puede borrar apuestas.");
-    }
 
     const numero = parseInt(args[0]);
     const apuestas = cargarApuestas();
@@ -262,9 +259,6 @@ client.on("messageCreate", async (message) => {
 
   // LIMPIAR TODAS LAS APUESTAS
   if (command === "limpiarapuestas" || command === "limpiapuestas") {
-    if (!message.member.permissions.has(PermissionFlagsBits.Administrator)) {
-      return message.reply("🔒 Solo un administrador puede limpiar apuestas.");
-    }
 
     const apuestas = cargarApuestas();
 
